@@ -166,10 +166,12 @@ body {
 }
 
 .content, .translation {
-    font-size: 32px;
+    font-size: 48px; /* 原来32px的1.5倍 */
     text-align: center;
     word-break: break-word;
+    overflow-wrap: break-word;
     max-width: 100%;
+    line-height: 1.3; /* 增加行高以提高可读性 */
 }
 
 .play-btn {
@@ -338,7 +340,7 @@ body {
     }
     
     .content, .translation {
-        font-size: 28px;
+        font-size: 42px; /* 原来28px的1.5倍 */
     }
 }
 
@@ -348,11 +350,11 @@ body {
     }
     
     #card-container {
-        height: 250px;
+        height: 300px; /* 增加高度以适应更大的字体 */
     }
     
     .content, .translation {
-        font-size: 24px;
+        font-size: 36px; /* 原来24px的1.5倍 */
     }
     
     .play-btn, .delete-btn, .shuffle-btn, .edit-btn {
