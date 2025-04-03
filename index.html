@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>英语练习卡片</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="input-container">
+    <input type="text" id="new-word" placeholder="输入新的英文单词或句子">
+    <button id="voice-input-btn"><i class="fas fa-microphone"></i></button>
+    <button id="submit-btn">提交</button>
+</div>
+<div id="voice-settings" style="display:none;">
+    <div class="setting-group">
+        <label for="voice-select">选择语音：</label>
+        <select id="voice-select">
+            <option value="default">自动选择最佳语音</option>
+            <!-- 语音选项将通过JavaScript动态添加 -->
+        </select>
+    </div>
+    <div class="setting-group">
+        <label for="rate-slider">语速：</label>
+        <input type="range" id="rate-slider" min="0.5" max="1.5" step="0.1" value="0.9">
+        <span id="rate-value">0.9</span>
+    </div>
+    <div class="setting-group">
+        <label for="pitch-slider">音调：</label>
+        <input type="range" id="pitch-slider" min="0.5" max="1.5" step="0.1" value="1.0">
+        <span id="pitch-value">1.0</span>
+    </div>
+</div>
+<div id="card-container">
+        <div class="card">
+            <div class="front">
+                <span class="content"></span>
+                <button class="play-btn"><i class="fas fa-play"></i></button>
+                <button class="delete-btn"><i class="fas fa-trash"></i></button>
+                <button class="shuffle-btn"><i class="fas fa-random"></i></button>
+            </div>
+            <div class="back">
+                <span class="translation"></span>
+                <button class="edit-btn"><i class="fas fa-edit"></i></button>
+            </div>
+        </div>
+        <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+        <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
